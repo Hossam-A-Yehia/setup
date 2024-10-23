@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es5", // أو يمكنك استخدام "es6"
+    "lib": ["dom", "es2015"], // تأكد من تضمين "es2015" أو "es6"
+    "module": "commonjs", // or "esnext" if you want to use ES Modules
+    "jsx": "react-jsx",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "types": ["@testing-library/jest-dom"] // Add this line
+  },
+  "include": [
+    "src/**/*"
+  ]
+}
