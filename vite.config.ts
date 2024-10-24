@@ -1,7 +1,15 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-})
+  test: {
+    globals: true,
+    environment: 'jsdom', // Use 'node' if you don't need a browser-like environment
+    coverage: {
+      provider: 'v8', // Using v8 for coverage
+      reportsDirectory: './coverage', // Directory to output the coverage report
+      reporter: ['text', 'json', 'html'], // Coverage report formats
+    },
+  },
+});

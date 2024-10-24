@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import FormField from "../molecules/FormField";
-import Button from "../atoms/Button";
+import Button from "../atoms/Button/Button";
 import { useLogin } from "../../hooks/useLogin";
 
 const LoginForm: React.FC = () => {
